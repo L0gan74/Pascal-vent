@@ -516,3 +516,97 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+/* step */
+
+.step {
+  padding: 60px 0 100px 0;
+}
+
+.step-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 95px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.step-title h2,
+.step-title p {
+  font-family: "Ruberoid";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 60px;
+  text-transform: capitalize;
+  color: #495e4c;
+}
+
+.step-title h2 {
+  display: flex;
+  align-items: center;
+}
+
+.step-title span {
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: #78c081;
+  border-radius: 1.5px;
+  margin-left: 23px;
+}
+
+.step-desc h3 {
+  font-family: "Ruberoid";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  text-transform: capitalize;
+  color: #78c081;
+  padding-bottom: 12px;
+}
+
+.step-desc__item {
+  display: flex;
+  padding-bottom: 8px;
+  align-items: baseline;
+}
+
+.step-desc__item img {
+  margin-right: 10px;
+}
+
+.step-desc__item p {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #7ca381;
+}
+
+.step-line {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.step-line__item {
+  text-align: center;
+}
+
+.step-line__item p {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #495e4c;
+  padding-top: 20px;
+  width: 165px;
+}
+
+.vector {
+  display: flex;
+  align-items: center;
+}
