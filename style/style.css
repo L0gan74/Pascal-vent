@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "Ruberoid";
+  src: url("Ruberoid-Regular.eot");
+  src: local("Ruberoid"), local("Ruberoid-Regular"),
+    url("Ruberoid-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Ruberoid-Regular.woff2") format("woff2"),
+    url("../fonts/Ruberoid-Regular.woff") format("woff"),
+    url("../fonts/Ruberoid-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNovaCond-RegularIt.eot");
+  src: local("Ruberoid"), local("Ruberoid-Regular"),
+    url("../fonts/ProximaNovaCond-Regular.woff") format("woff"),
+    url("../fonts/ProximaNovaCond-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts//ProximaNovaCond-SemiboldIt.eot");
+  src: local("Ruberoid"), local("Ruberoid-Regular"),
+    url("../fonts/ProximaNovaCond-Semibold.woff") format("woff"),
+    url("../fonts/ProximaNovaCond-Semibold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Ruberoid";
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 114px;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.nav ul {
+  width: 646px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: lowercase;
+  color: #495e4c;
+}
+
+.header-btn button {
+  width: 190px;
+  height: 55px;
+  background: #5ccd6a;
+  border-radius: 17px;
+  font-family: "Ruberoid";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
+}
+
+.header-btn {
+  width: 210px;
+  height: 75px;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  background-image: url("../img/main.jpg");
+  background-size: cover;
+  min-height: 820px;
+  background-position: center;
+}
+
+.main-txt {
+  padding-top: 80px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-family: "Ruberoid";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 74px;
+  text-transform: capitalize;
+  color: #495e4c;
+}
+
+.main-line {
+  width: 148px;
+  height: 3px;
+  background: #78c081;
+  border-radius: 1.5px;
+  display: block;
+  margin-right: 45px;
+}
+
+.main-together {
+  display: flex;
+  align-items: center;
+}
+
+.main-txt h1 {
+  font-family: "Ruberoid";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 74px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #78c081;
+}
+
+.main-desc {
+  padding-top: 20px;
+}
+
+.main-desc {
+  display: flex;
+  padding-top: 20px;
+}
+
+.main-desc p {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #7ca381;
+  padding-left: 24px;
+  max-width: 453px;
+}
+
+.main-bottom {
+  padding-top: 52px;
+  max-width: 458px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-bottom__location,
+.main-bottom__tel {
+  display: flex;
+  align-items: center;
+}
+
+.main-bottom__location img {
+  margin-right: 24px;
+}
+
+.main-bottom__location p,
+.main-bottom__tel p {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #7b897d;
+}
+
+.main-bottom__location p {
+  max-width: 154px;
+}
+
+.main-bottom__tel img {
+  margin-right: 22px;
+}
+
+.main-bottom__tel p {
+  max-width: 113px;
+}
+
+.main-btn{
+    
+}
