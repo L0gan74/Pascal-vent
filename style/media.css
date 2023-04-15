@@ -1,0 +1,16 @@
+@media (max-width: 1100px) {
+  .logo {
+    width: 168px;
+  }
+  .header {
+    height: 53px;
+    padding: 23px 28px;
+  }
+  .nav,
+  .header-btn {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+}

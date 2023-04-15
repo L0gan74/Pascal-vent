@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style/media.css" />
   </head>
   <body>
     <section class="main">
       <header class="header">
-        <img src="./img/logo.svg" alt="logo" />
+        <img class="logo" src="./img/logo.svg" alt="logo" />
         <nav class="nav">
           <ul>
             <li><a href="#">Услуги</a></li>
@@ -22,8 +27,23 @@
           </ul>
         </nav>
         <span class="header-btn">
-          <button type="button">Связаться</button>
+          <button class="open-button" type="button">Связаться</button>
         </span>
+        <button class="menu-toggler" type="button" onclick="toggleMenu()">
+          <img class="burger" src="./img/burger.svg" alt="burger" />
+        </button>
+        <div class="menu-wrapper">
+          <div class="menu">
+            <ul>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">О Нас</a></li>
+              <li><a href="#">Польза Продукта</a></li>
+              <li><a href="#">Оборудование</a></li>
+              <li><a href="#">Этапы Работы</a></li>
+              <li><a href="#">Отзывы</a></li>
+            </ul>
+          </div>
+        </div>
       </header>
       <div class="main-txt">
         <p class="main-title">Чистый Воздух</p>
@@ -47,14 +67,14 @@
             </span>
           </div>
           <div class="main-bottom__tel">
-            <img src="./img/tel.svg" alt="tel" />
+            <img src="./img/tel.png" alt="tel" />
             <span>
               <p>+ 7 492 373 63 31 + 7 424 367 89 29</p>
             </span>
           </div>
         </div>
         <span class="main-btn">
-          <button type="button">Оставить заявку</button>
+          <button class="open-button2" type="button">Оставить заявку</button>
         </span>
       </div>
     </section>
@@ -388,7 +408,7 @@
           близких.
         </p>
         <span>
-          <button type="button">заполнить заявку</button>
+          <button class="open-button3" type="button">заполнить заявку</button>
         </span>
       </div>
       <img class="comfort-img" src="./img/Screenshot_1.png" alt="img" />
@@ -439,9 +459,245 @@
           </p>
         </div>
       </div>
-      <img class="act" src="./img/act.png" alt="act"/>
+      <img class="act" src="./img/act.png" alt="act" />
     </section>
-    <section class="portfolio"></section>
+    <section class="portfolio">
+      <img class="portfolio-img" src="./img/ellipse-1.png" alt="elipce" />
+      <div class="portfolio-top">
+        <h2>Портфолио И Процесс работы</h2>
+        <p>
+          Технические решения, принятые в рабочих чертежах, соответствуют
+          требованиям экологических, санитарно-гигиенических, противопожарных и
+          других норм и правил, и обеспечивают безопасную для жизни людей
+          эксплуатацию объекта при соблюдении предусмотренных рабочими чертежами
+          мероприятий.
+        </p>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swipper-btn">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="portfolio-item">
+              <img
+                class="portfolio-item__img"
+                src="./img/siper-logo.svg"
+                alt="svg"
+              />
+              <span>
+                <h3>приточная вентиляция</h3>
+                <p>Монтаж приточной вентиляции (объект в Прайм Парк)</p>
+              </span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="portfolio-item">
+              <img
+                class="portfolio-item__img"
+                src="./img/siper-logo.svg"
+                alt="svg"
+              />
+              <span>
+                <h3>приточная вентиляция</h3>
+                <p>Монтаж приточной вентиляции (объект в Прайм Парк)</p>
+              </span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="portfolio-item">
+              <img
+                class="portfolio-item__img"
+                src="./img/siper-logo.svg"
+                alt="svg"
+              />
+              <span>
+                <h3>приточная вентиляция</h3>
+                <p>Монтаж приточной вентиляции (объект в Прайм Парк)</p>
+              </span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="portfolio-item">
+              <img
+                class="portfolio-item__img"
+                src="./img/siper-logo.svg"
+                alt="svg"
+              />
+              <span>
+                <h3>приточная вентиляция</h3>
+                <p>Монтаж приточной вентиляции (объект в Прайм Парк)</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="clients">
+      <div class="clients-txt">
+        <h2>Известные клиенты<span></span></h2>
+        <p class="clients-title">которые нам доверились</p>
+        <p class="clients-desc">
+          Реализованы проекты квартир и коммерческих помещений в жилых
+          комплексах от крупных застройщиков таких как: Level, ФСК, MR групп,
+          ПИК, Самолет, Гранель, Донстрой, Пионер, Эталон, А101, Sminex, Vesper,
+          Инград, КРОСТ, МИЦ. Мы ценим каждого клиента Pascal Vent и с радостью
+          готовы расширять нашу клиентскую базу.
+        </p>
+      </div>
+      <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/swipperbottom-1.png" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/swipperbottom-2.png" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/swipperbottom-1.png" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/swipperbottom-2.png" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/swipperbottom-1.png" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/swipperbottom-1.png" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/swipperbottom-2.png" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/swipperbottom-1.png" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/swipperbottom-2.png" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/swipperbottom-1.png" alt="img" />
+          </div>
+        </div>
+        <div class="swipper-btn">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+    <div class="popup">
+      <div class="popup-content">
+        <button class="close-button">
+          <img src="./img/close.svg" alt="close" />
+        </button>
+        <h3>Быстрая связь</h3>
+        <p class="popup-title">с нами <span></span></p>
+        <div class="popup-main">
+          <p class="popup-main__desc">
+            Вы можете набрать нам, и менеджеры Pascal Vent с радостью
+            проконсультирует Вас по любому вопросу и помогут определиться с
+            выбором.
+          </p>
+          <p class="popup-main__tel">График приема звонков:</p>
+          <span class="time">
+            <img src="./img/time.svg" alt="time" />ПН-СБ с 9:00 до 19:00
+          </span>
+          <div class="popup-tel">
+            <span class="popup-tel__first"
+              ><img src="./img/tel.png" alt="tel" />+ 7 492 373 63 31</span
+            >
+            <span><img src="./img/tel.png" alt="tel" />+ 7 492 373 63 31</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup2">
+      <div class="popup-content">
+        <button class="close-button close-button2">
+          <img src="./img/close.svg" alt="close" />
+        </button>
+        <h3>Мы Свяжемся</h3>
+        <p class="popup-title">с вами <span></span></p>
+        <div class="popup-main">
+          <form class="popup-form">
+            <input type="text" placeholder="Ваше Имя" />
+            <input type="tel" placeholder="Номер телефона" />
+            <span>
+              <button type="submit">отправить</button>
+            </span>
+          </form>
+        </div>
+        <img class="popup-img" src="./img/logo.svg" alt="img" />
+      </div>
+    </div>
+    <div class="popup popup3">
+      <div class="popup-content">
+        <button class="close-button close-button3">
+          <img src="./img/close.svg" alt="close" />
+        </button>
+        <h3>Мы Свяжемся</h3>
+        <p class="popup-title">с вами <span></span></p>
+        <div class="popup-main">
+          <form class="popup-form">
+            <input type="text" placeholder="Ваше Имя" />
+            <input type="tel" placeholder="Номер телефона" />
+            <span>
+              <button type="submit">отправить</button>
+            </span>
+          </form>
+        </div>
+        <img class="popup-img" src="./img/logo.svg" alt="img" />
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-wrraper">
+        <div class="footer-wrraper__item">
+          <img src="./img/footer-logo.png" alt="logo" />
+          <p class="footer-desc">
+            Компания "Pascal Vent" входит в число лучших специализированных
+            организаций, с широким ассортиментом товаров и услуг,
+            предназначенных для систем вентиляции и кондиционирования,
+            предоставляющих высокий сервис и удобство обслуживания нашим
+            клиентам.
+          </p>
+          <h3 class="footer-slogan">
+            Чистый воздух вместе с <span>Pascal Vent</span>
+          </h3>
+        </div>
+        <div class="footer-wrraper__item">
+          <h4 class="footer-contact">Контакты</h4>
+          <span class="footer-contact__span">
+            <img src="./img/tel.png" alt="tel" />+ 7 492 373 63 31
+          </span>
+          <span class="footer-contact__span">
+            <img src="./img/mail.png" alt="tel" />+ 7 424 367 89 29
+          </span>
+          <span class="footer-contact__span">
+            <img src="./img/tel.png" alt="tel" />PascalVent@mail.ru
+          </span>
+          <span class="footer-contact__bottom">
+            <img src="./img/calendar.png" alt="img" />
+            <p>
+              Пн - Сб: 9:00 - 19:00<br />
+              Вс: выходной
+            </p>
+          </span>
+          <span class="footer-contact__bottom">
+            <img src="./img/geo.png" alt="geo" />
+            <p>Московский регион, Москва ул. Плеханова, 28А</p>
+          </span>
+        </div>
+        <form class="form-footer">
+          <h4>Заполнить заявку</h4>
+          <input type="text" placeholder="Ваше Имя" />
+          <input type="tel" placeholder="Номер телефона" />
+          <span>
+            <button type="submit">отрпавить</button>
+          </span>
+        </form>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
