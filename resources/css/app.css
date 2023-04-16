@@ -3,29 +3,29 @@
   src: url("Ruberoid-Regular.eot");
   src: local("Ruberoid"), local("Ruberoid-Regular"),
     url("Ruberoid-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Ruberoid-Regular.woff2") format("woff2"),
-    url("../fonts/Ruberoid-Regular.woff") format("woff"),
-    url("../fonts/Ruberoid-Regular.ttf") format("truetype");
+    url("/public/fonts/Ruberoid-Regular.woff2") format("woff2"),
+    url("/public/fonts/Ruberoid-Regular.woff") format("woff"),
+    url("/public/fonts/Ruberoid-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/ProximaNovaCond-RegularIt.eot");
+  src: url("/public/fonts/ProximaNovaCond-RegularIt.eot");
   src: local("Ruberoid"), local("Ruberoid-Regular"),
-    url("../fonts/ProximaNovaCond-Regular.woff") format("woff"),
-    url("../fonts/ProximaNovaCond-Regular.ttf") format("ttf");
+    url("/public/fonts/ProximaNovaCond-Regular.woff") format("woff"),
+    url("/public/fonts/ProximaNovaCond-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts//ProximaNovaCond-SemiboldIt.eot");
+  src: url("/public/fonts/ProximaNovaCond-SemiboldIt.eot");
   src: local("Ruberoid"), local("Ruberoid-Regular"),
-    url("../fonts/ProximaNovaCond-Semibold.woff") format("woff"),
-    url("../fonts/ProximaNovaCond-Semibold.ttf") format("ttf");
+    url("/public/fonts/ProximaNovaCond-Semibold.woff") format("woff"),
+    url("/public/fonts/ProximaNovaCond-Semibold.ttf") format("ttf");
   font-weight: 600;
   font-style: normal;
 }
@@ -35,6 +35,10 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: #f5f5f5;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -82,7 +86,8 @@ button {
   align-items: center;
 }
 
-.nav a {
+.nav a,
+.nav button {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 400;
@@ -241,6 +246,7 @@ button {
   border-radius: 40px;
   margin-top: 63px;
 }
+
 .main-btn button:hover {
   background: #54e165;
   box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
@@ -422,6 +428,7 @@ button {
   padding-bottom: 20px;
   align-items: flex-start;
 }
+
 .services-accordion__txt-item img {
   margin-right: 15px;
 }
@@ -494,6 +501,11 @@ button {
   position: relative;
   display: block;
   margin: 0 auto;
+}
+
+.work-wrapper__item img {
+  width: 100%;
+  height: 230px;
 }
 
 .work-name {
@@ -661,7 +673,6 @@ button {
 .form {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   max-width: 1000px;
   justify-content: space-between;
 }
@@ -955,16 +966,6 @@ button {
   text-align: right;
 }
 
-.scheme-wrapper__item {
-  background-size: cover;
-  width: 496px;
-  height: 254px;
-  background-repeat: no-repeat;
-  background-position: center right;
-  display: block;
-  margin: 0 auto;
-}
-
 .scheme-wrapper__item:nth-child(1) {
   background-image: url("../img/scheme.png");
 }
@@ -987,6 +988,16 @@ button {
 
 .scheme-wrapper__item:nth-child(6) {
   background-image: url("../img/scheme-6.png");
+}
+
+.scheme-wrapper__item {
+  background-size: cover;
+  width: 496px;
+  height: 254px;
+  background-repeat: no-repeat;
+  background-position: center right;
+  display: block;
+  margin: 0 auto;
 }
 
 .scheme-wrapper__item h3 {
@@ -1070,17 +1081,15 @@ button {
 }
 
 .portfolio-item {
-  background-image: url("../img/swiper-top.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  min-height: 456px;
+  height: 456px;
   position: relative;
 }
 
 .portfolio-item span {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
   display: block;
-  padding-top: 264px;
-  padding-left: 80px;
 }
 
 .portfolio-item h3 {
@@ -1105,7 +1114,8 @@ button {
 
 .portfolio-item__img {
   padding-top: 35px;
-  width: 164px;
+  width: 100%;
+  height: 100%;
 }
 
 .portfolio-img {
@@ -1228,12 +1238,9 @@ button {
   width: auto !important;
 }
 
-.mySwiper2 {
-  height: 210px !important;
-}
-
 .mySwiper2 .swipper-btn {
   justify-content: center;
+  margin-top: 70px;
 }
 
 .mySwiper2 .swiper-wrapper {
@@ -1244,7 +1251,11 @@ button {
   height: 150px !important;
   width: auto !important;
 }
-
+.mySwiper2 .swiper-slide img{
+  height: 150px;
+width: 300px;
+border-radius: 30px;
+}
 /* footer */
 
 .footer {
@@ -1319,6 +1330,7 @@ button {
 .footer-contact__span img {
   margin-right: 15px;
 }
+
 .footer-contact__bottom img {
   margin-right: 15px;
 }
@@ -1574,7 +1586,8 @@ button {
   padding-top: 50px;
 }
 
-.menu a {
+.menu a,
+.menu button {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 400;
@@ -1635,4 +1648,91 @@ button {
 .popup-img {
   display: block;
   margin: 15px auto;
+}
+
+/* forms */
+.form-error {
+  color: red;
+  padding: 20px;
+  font-family: "Ruberoid";
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.19);
+  padding: 1rem;
+  border-radius: 15px;
+  margin: 10px auto;
+  font-family: "Ruberoid";
+  color: #495e4c;
+  width: 90%;
+}
+
+.login h2 {
+  text-align: center;
+  margin: 0;
+  font-family: "Ruberoid";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  color: #495e4c;
+  padding-bottom: 25px;
+}
+
+.login form input {
+  margin: 0;
+}
+
+.login form {
+  background: white;
+  width: 320px;
+  border-radius: 10px;
+  display: grid;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 1rem;
+  justify-items: center;
+}
+
+.login form a {
+  font-family: "Ruberoid";
+}
+
+.login button:hover {
+  background: #54e165;
+  box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
+}
+
+.adm-btn button {
+  font-family: "Ruberoid";
+  font-size: 1rem;
+  border: 1px solid lightgray;
+  background-color: white;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.adm-btn .add {
+  margin-top: 2rem;
+}
+
+.adm-btn a {
+  position: relative;
+  z-index: 2;
+}
+
+.admin-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
+  max-width: 1170px;
+  margin: 0 auto;
+  grid-column-gap: 47px;
+  grid-row-gap: 35px;
+}
+
+.admin-item {
+  font-size: 1.3rem;
+  padding: 1rem;
+  border: 1px solid lightgray;
+  font-family: "Ruberoid";
 }
