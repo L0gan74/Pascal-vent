@@ -108,6 +108,12 @@ button {
   box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
 }
 
+.header-btn:hover button {
+  background: rgba(255, 255, 255, 0.45);
+  background: #54e165;
+  box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
+}
+
 .header-btn {
   width: 210px;
   height: 75px;
@@ -235,6 +241,10 @@ button {
   border-radius: 40px;
   margin-top: 63px;
 }
+.main-btn button:hover {
+  background: #54e165;
+  box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
+}
 
 .main-btn button {
   width: 447px;
@@ -330,6 +340,10 @@ button {
   transform: rotate(270deg);
 }
 
+.services-img__adp {
+  display: none;
+}
+
 .services-btn__system p {
   transform: rotate(-90deg);
   position: absolute;
@@ -347,7 +361,6 @@ button {
   width: 65px;
   height: 233px;
   background: white;
-  box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
   border-radius: 40px 0px 0px 0;
   display: block;
   cursor: pointer;
@@ -479,6 +492,8 @@ button {
   filter: drop-shadow(0px 2px 4px rgba(46, 35, 25, 0.3));
   border-radius: 25px 25px 0px 0px;
   position: relative;
+  display: block;
+  margin: 0 auto;
 }
 
 .work-name {
@@ -529,6 +544,10 @@ button {
   grid-gap: 95px;
   max-width: 1170px;
   margin: 0 auto;
+}
+
+.step-adp {
+  display: none;
 }
 
 .step-title h2,
@@ -641,6 +660,8 @@ button {
 
 .form {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .form input {
@@ -668,6 +689,11 @@ button {
   justify-content: center;
   align-items: center;
   margin-left: 30px;
+}
+
+.form span button:hover {
+  background: #54e165;
+  box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
 }
 
 .form button {
@@ -791,6 +817,7 @@ button {
 .about-descr__item span {
   font-size: 35px;
   text-transform: capitalize;
+  margin-right: 5px;
 }
 
 .about-descr__item p {
@@ -892,6 +919,11 @@ button {
   color: #ffffff;
 }
 
+.comfort button:hover {
+  background: #54e165;
+  box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
+}
+
 /* scheme */
 
 .scheme {
@@ -920,6 +952,7 @@ button {
 
 .scheme-wrapper__item:nth-child(2n) {
   margin-top: 50px;
+  text-align: right;
 }
 
 .scheme-wrapper__item {
@@ -1293,6 +1326,10 @@ button {
   padding-bottom: 25px;
 }
 
+.footer-adp {
+  display: none;
+}
+
 .form-footer {
   max-width: 290px;
 }
@@ -1339,6 +1376,11 @@ button {
   color: #ffffff;
 }
 
+.form-footer span button:hover {
+  background: #54e165;
+  box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
+}
+
 /* popup */
 
 .burger {
@@ -1354,6 +1396,7 @@ button {
   height: 100%;
   background: rgba(217, 250, 221, 0.55);
   backdrop-filter: blur(10px);
+  z-index: 300;
 }
 
 .popup.active {
@@ -1421,7 +1464,7 @@ button {
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(73, 93, 76, 0.1);
   border-radius: 35px 35px 50px 50px;
-  padding: 35px;
+  padding: 15px 35px 35px 35px;
 }
 
 .popup-main__desc {
@@ -1525,7 +1568,7 @@ button {
 .popup-form input {
   width: 342px;
   height: 49px;
-  margin: 0 auto 20px auto;
+  margin: 20px auto 0 auto;
   background: #ffffff;
   box-shadow: 0px 0px 8px rgba(66, 83, 69, 0.14);
   border-radius: 15px;
@@ -1544,7 +1587,7 @@ button {
   height: 75px;
   background: rgba(120, 192, 129, 0.25);
   border-radius: 20px;
-  margin: 15px auto 0 auto;
+  margin: 35px auto 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;

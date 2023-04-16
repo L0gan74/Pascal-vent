@@ -18,20 +18,31 @@ button2.addEventListener("click", () => {
 });
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: "auto",
   slidesPerView: 4,
   spaceBetween: 30,
-  centeredSlides: true,
   grabCursor: true,
+  slidesOffsetBefore: 150,
+  slidesOffsetAfter: 400,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    360: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      slidesOffsetBefore: 10,
+      slidesOffsetAfter: 10,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
 });
 
-var swiper = new Swiper(".mySwiper2", {
+var swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: "auto",
-
   spaceBetween: 30,
   navigation: {
     nextEl: ".swiper-button-next",
