@@ -67,7 +67,7 @@
             <input type="text" placeholder="Ваше Имя" />
             <input type="tel" placeholder="Номер телефона" />
             <span>
-                <button type="submit">отрпавить</button>
+                <button type="submit">отправить</button>
             </span>
         </form>
         <div class="footer-adp">

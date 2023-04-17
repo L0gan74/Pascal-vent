@@ -336,6 +336,16 @@ button {
   fill: #7ca281;
 }
 
+.services-btn__system:not(.extra-class):hover p,
+.services-btn__kond:not(.extra-class):hover p {
+  color: #5ccd6a;
+}
+
+.services-btn__system:not(.extra-class):hover svg,
+.services-btn__kond:not(.extra-class):hover svg {
+  fill: #5ccd6a;
+}
+
 .services-accordion__btn p {
   font-family: "Proxima Nova";
   font-style: normal;
@@ -690,6 +700,7 @@ button {
   line-height: 17px;
   color: rgba(124, 163, 129, 0.7);
   padding-left: 20px;
+  border: none;
 }
 
 .form span {
@@ -1126,7 +1137,6 @@ button {
 }
 
 .swiper-button-next {
-  background-image: url("../img/next.svg") !important;
   background-size: 46px 46px !important;
   background-repeat: no-repeat;
   background-position: center;
@@ -1134,10 +1144,19 @@ button {
   margin: 0 !important;
   width: 60px !important;
   height: 60px !important;
+  background: #5ccd6a;
+  border-radius: 100%;
+  box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
+  outline: 10px solid rgba(120, 192, 129, 0.25);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #54e165;
+  box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
 }
 
 .swiper-button-prev {
-  background-image: url("../img/prev.svg") !important;
   background-size: 46px 46px !important;
   background-repeat: no-repeat;
   background-position: center;
@@ -1145,21 +1164,58 @@ button {
   margin: 0 50px 0 0 !important;
   width: 60px !important;
   height: 60px !important;
+  background: #5ccd6a;
+  border-radius: 100%;
+  box-shadow: inset 2px -2px 12px rgba(34, 111, 33, 0.36);
+  outline: 10px solid rgba(120, 192, 129, 0.25);
+}
+
+.swiper-button-disabled {
+  outline: 10px solid rgba(255, 255, 255, 0.428) !important;
+  background: white !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+.swiper-button-next.swiper-button-disabled:after,
+.swiper-rtl .swiper-button-prev.swiper-button-disabled:after {
+  content: "" !important;
+  background: url('../img/ar_right_bg.png') no-repeat center;
+  background-size: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev.swiper-button-disabled:after,
+.swiper-rtl .swiper-button-next.swiper-button-disabled:after {
+  content: "" !important;
+  background: url('../img/ar_left_bg.png') no-repeat center;
+  background-size: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
   content: "" !important;
+  background: url('../img/ar_right.png') no-repeat center;
+  background-size: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
   content: "" !important;
+  background: url('../img/ar_left.png') no-repeat center;
+  background-size: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .swipper-btn {
   max-width: 1170px;
-  margin: 0 auto 25px auto;
+  margin: 10px auto 25px auto;
   position: relative;
   z-index: 2;
   display: flex;
@@ -1251,11 +1307,13 @@ button {
   height: 150px !important;
   width: auto !important;
 }
-.mySwiper2 .swiper-slide img{
+
+.mySwiper2 .swiper-slide img {
   height: 150px;
-width: 300px;
-border-radius: 30px;
+  width: 300px;
+  border-radius: 30px;
 }
+
 /* footer */
 
 .footer {
@@ -1383,6 +1441,7 @@ border-radius: 30px;
   color: #7ca381;
   margin-bottom: 20px;
   padding-left: 20px;
+  border: none;
 }
 
 .form-footer span {
@@ -1616,6 +1675,7 @@ border-radius: 30px;
   color: #7ca381;
   padding-left: 20px;
   outline: none;
+  border: none;
 }
 
 .popup-form span {
