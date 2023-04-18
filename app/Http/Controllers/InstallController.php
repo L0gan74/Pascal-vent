@@ -43,16 +43,16 @@ class InstallController extends Controller
 
         Install::create(['title' => $request->title, 'photo' => $fileName, 'price' => $request->price]);
 
-        return redirect(url('/'));
+        return redirect(url('/admin/install'));
     }
 
     public function one(int $id)
     {
         if ($item = Install::where('id', '=', $id)->first()) {
-            return view('/updateInstall', ['id' => $id, 'data' => $item]);
+            return view('admin.updateInstall', ['id' => $id, 'data' => $item]);
         }
 
-        return redirect(url('/'));
+        return redirect(url('/admin/install'));
     }
 
     public function update(Request $request)
@@ -97,7 +97,7 @@ class InstallController extends Controller
             ]);
         }
 
-        return redirect(url('/'));
+        return redirect(url('/admin/install'));
     }
 
     public function delete(int $id)
@@ -107,6 +107,6 @@ class InstallController extends Controller
             Storage::disk('public')->delete($item->photo);
         }
 
-        return redirect(url('/'));
+        return redirect(url('/admin/install'));
     }
 }

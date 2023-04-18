@@ -193,22 +193,9 @@
                     <img src="{{ 'storage/' . $i->photo }}" alt="{{ $i->photo }}" />
                     <span class="work-name">{{ $i->title }}</span>
                     <span class="work-prace">от {{ $i->price }} ₽</span>
-                    @if (Auth::check() && Auth::user()->role === 'admin')
-                        <div class="adm-btn">
-                            <a href="{{ url('/deleteInstall') }}/{{ $i->id }}"><button
-                                    type="button">удалить</button></a>
-                            <a href="{{ url('/updateInstall') }}/{{ $i->id }}"><button
-                                    type="button">Редактировать</button></a>
-                        </div>
-                    @endif
                 </div>
             @endforeach
         </div>
-        @if (Auth::check() && Auth::user()->role === 'admin')
-            <div class="adm-btn">
-                <a href="{{ url('/addInstall') }}"><button type="button" class="add">Добавить</button></a>
-            </div>
-        @endif
     </section>
     <section class="step">
         <div class="step-wrapper">
@@ -432,24 +419,11 @@
                                 <p>{{ $p->text }}</p>
                             </span>
                         </div>
-                        @if (Auth::check() && Auth::user()->role === 'admin')
-                            <div class="adm-btn">
-                                <a href="{{ url('/deletePortfolio') }}/{{ $p->id }}"><button
-                                        type="button">удалить</button></a>
-                                <a href="{{ url('/updatePortfolio') }}/{{ $p->id }}"><button
-                                        type="button">Редактировать</button></a>
-                            </div>
-                        @endif
                     </div>
                 @endforeach
             </div>
         </div>
     </section>
-    @if (Auth::check() && Auth::user()->role === 'admin')
-        <div class="adm-btn">
-            <a href="{{ url('/addPortfolio') }}"><button type="button" class="add">Добавить</button></a>
-        </div>
-    @endif
     <section class="clients" id="rew">
         <div class="clients-txt">
             <h2>Известные клиенты<span></span></h2>
@@ -467,14 +441,6 @@
                 @foreach ($clients as $c)
                     <div class="swiper-slide">
                         <img src="{{ 'storage/' . $c->photo }}" alt="img" />
-                        @if (Auth::check() && Auth::user()->role === 'admin')
-                            <div class="adm-btn">
-                                <a href="{{ url('/deleteClient') }}/{{ $c->id }}"><button
-                                        type="button">удалить</button></a>
-                                <a href="{{ url('/updateClient') }}/{{ $c->id }}"><button
-                                        type="button">Редактировать</button></a>
-                            </div>
-                        @endif
                     </div>
                 @endforeach
             </div>
@@ -483,11 +449,6 @@
                 <div class="swiper-button-next"></div>
             </div>
         </div>
-        @if (Auth::check() && Auth::user()->role === 'admin')
-            <div class="adm-btn">
-                <a href="{{ url('/addClient') }}"><button type="button" class="add">Добавить</button></a>
-            </div>
-        @endif
     </section>
 
     <div class="popup popup2">

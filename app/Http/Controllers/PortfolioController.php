@@ -36,16 +36,16 @@ class PortfolioController extends Controller
 
         Portfolio::create(['title' => $request->title, 'photo' => $fileName, 'text' => $request->text]);
 
-        return redirect(url('/'));
+        return redirect(url('/admin/portfolio'));
     }
 
     public function one(int $id)
     {
         if ($item = Portfolio::where('id', '=', $id)->first()) {
-            return view('/updatePortfolio', ['id' => $id, 'data' => $item]);
+            return view('admin.updatePortfolio', ['id' => $id, 'data' => $item]);
         }
 
-        return redirect(url('/'));
+        return redirect(url('/admin/portfolio'));
     }
 
     public function update(Request $request)
@@ -84,7 +84,7 @@ class PortfolioController extends Controller
             ]);
         }
 
-        return redirect(url('/'));
+        return redirect(url('/admin/portfolio'));
     }
 
     public function delete(int $id)
@@ -94,6 +94,6 @@ class PortfolioController extends Controller
             Storage::disk('public')->delete($item->photo);
         }
 
-        return redirect(url('/'));
+        return redirect(url('/admin/portfolio'));
     }
 }
