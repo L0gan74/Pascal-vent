@@ -30,16 +30,16 @@ class ClientController extends Controller
 
         Client::create(['photo' => $fileName]);
 
-        return redirect(url('/'));
+        return redirect(url('/admin/client'));
     }
 
     public function one(int $id)
     {
         if ($item = Client::where('id', '=', $id)->first()) {
-            return view('/updateClient', ['id' => $id, 'data' => $item]);
+            return view('admin/updateClient', ['id' => $id, 'data' => $item]);
         }
 
-        return redirect(url('/'));
+        return redirect(url('/admin/client'));
     }
 
     public function update(Request $request)
@@ -68,7 +68,7 @@ class ClientController extends Controller
             'photo' => $fileName,
         ]);
 
-        return redirect(url('/'));
+        return redirect(url('/admin/client'));
     }
 
     public function delete(int $id)
@@ -78,6 +78,6 @@ class ClientController extends Controller
             Storage::disk('public')->delete($item->photo);
         }
 
-        return redirect(url('/'));
+        return redirect(url('/admin/client'));
     }
 }

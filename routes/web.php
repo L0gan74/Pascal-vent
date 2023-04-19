@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\PortfolioController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,47 +27,57 @@ Route::group(['middleware' => config('fortify.middleware', ['web'])], function (
 
         Route::group(['middleware' => 'role:admin'], function () {
 
-            Route::get('/admin', [AdminController::class, 'get']);
+            Route::get('/admin', [AdminController::class, 'requests']);
+
+            Route::get('/admin/client', [AdminController::class, 'client']);
+
+            Route::get('/admin/install', [AdminController::class, 'install']);
+
+            Route::get('/admin/portfolio', [AdminController::class, 'portfolio']);
 
             /* installs */
-            Route::post('/addInstall', [InstallController::class, 'add']);
+            Route::post('admin/addInstall', [InstallController::class, 'add']);
 
-            Route::get('/addInstall', function () {
-                return view('addInstall');
+            Route::get('/admin/addInstall', function () {
+                return view('admin.addInstall');
             });
 
-            Route::get('/updateInstall/{id}', [InstallController::class, 'one']);
+            Route::get('/admin/updateInstall/{id}', [InstallController::class, 'one']);
 
-            Route::post('/updateInstall', [InstallController::class, 'update']);
+            Route::post('/admin/updateInstall', [InstallController::class, 'update']);
 
-            Route::get('/deleteInstall/{id}', [InstallController::class, 'delete']);
+            Route::get('/admin/deleteInstall/{id}', [InstallController::class, 'delete']);
 
             /* clients */
-            Route::post('/addClient', [ClientController::class, 'add']);
+            Route::post('/admin/addClient', [ClientController::class, 'add']);
 
-            Route::get('/addClient', function () {
-                return view('addClient');
+            Route::get('/admin/addClient', function () {
+                return view('admin.addClient');
             });
 
-            Route::get('/updateClient/{id}', [ClientController::class, 'one']);
+            Route::get('/admin/updateClient/{id}', [ClientController::class, 'one']);
 
-            Route::post('/updateClient', [ClientController::class, 'update']);
+            Route::post('/admin/updateClient', [ClientController::class, 'update']);
 
-            Route::get('/deleteClient/{id}', [ClientController::class, 'delete']);
+            Route::get('/admin/deleteClient/{id}', [ClientController::class, 'delete']);
 
             /* portfolios */
-            Route::post('/addPortfolio', [PortfolioController::class, 'add']);
+            Route::post('/admin/addPortfolio', [PortfolioController::class, 'add']);
 
-            Route::get('/addPortfolio', function () {
-                return view('addPortfolio');
+            Route::get('/admin/addPortfolio', function () {
+                return view('admin.addPortfolio');
             });
 
-            Route::get('/updatePortfolio/{id}', [PortfolioController::class, 'one']);
+            Route::get('/admin/updatePortfolio/{id}', [PortfolioController::class, 'one']);
 
-            Route::post('/updatePortfolio', [PortfolioController::class, 'update']);
+            Route::post('/admin/updatePortfolio', [PortfolioController::class, 'update']);
 
-            Route::get('/deletePortfolio/{id}', [PortfolioController::class, 'delete']);
+            Route::get('/admin/deletePortfolio/{id}', [PortfolioController::class, 'delete']);
+        });
 
+        Route::get('/logout', function () {
+            Auth::logout();
+            return redirect(url('/'));
         });
     });
 });

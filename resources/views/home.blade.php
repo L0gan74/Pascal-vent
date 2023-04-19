@@ -102,8 +102,7 @@
                             <path
                                 d="M8.7655 17.3572C8.23112 17.3572 7.7987 17.7885 7.7987 18.3215V19.7952C7.7987 22.0873 6.52131 24.1477 4.4659 25.1732C3.98817 25.4114 3.79462 25.9906 4.03348 26.467C4.27118 26.9398 4.84817 27.1373 5.33073 26.8983C8.04607 25.5442 9.7323 22.8227 9.7323 19.7952V18.3215C9.7323 17.7885 9.29988 17.3572 8.7655 17.3572Z" />
                             <path
-                                d="M24.2344 17.3572C23.7 17.3572 23.2676 17.7885 23.2676 18.3215V19.7952C23.2676 22.8227 24.9538 25.5442 27.6691 26.8983C28.1513 27.137 28.7285 26.9402 28.9664 26.467C29.2053 25.9906 29.0117 25.4114 28.534 25.1732C26.4786 24.1477 25.2012 22.0873 25.2012 19.7952V18.3215C25.2012 17.7885 24.7688 17.3572 24.2344 17.3572Z"
-                                fill="#7CA281" />
+                                d="M24.2344 17.3572C23.7 17.3572 23.2676 17.7885 23.2676 18.3215V19.7952C23.2676 22.8227 24.9538 25.5442 27.6691 26.8983C28.1513 27.137 28.7285 26.9402 28.9664 26.467C29.2053 25.9906 29.0117 25.4114 28.534 25.1732C26.4786 24.1477 25.2012 22.0873 25.2012 19.7952V18.3215C25.2012 17.7885 24.7688 17.3572 24.2344 17.3572Z" />
                             <path
                                 d="M17.4668 26.0357V18.3215C17.4668 17.7885 17.0344 17.3572 16.5 17.3572C15.9656 17.3572 15.5332 17.7885 15.5332 18.3215V26.0357C15.5332 26.5687 15.9656 27 16.5 27C17.0344 27 17.4668 26.5687 17.4668 26.0357Z" />
                             <path
@@ -194,22 +193,9 @@
                     <img src="{{ 'storage/' . $i->photo }}" alt="{{ $i->photo }}" />
                     <span class="work-name">{{ $i->title }}</span>
                     <span class="work-prace">от {{ $i->price }} ₽</span>
-                    @if (Auth::check() && Auth::user()->role === 'admin')
-                        <div class="adm-btn">
-                            <a href="{{ url('/deleteInstall') }}/{{ $i->id }}"><button
-                                    type="button">удалить</button></a>
-                            <a href="{{ url('/updateInstall') }}/{{ $i->id }}"><button
-                                    type="button">Редактировать</button></a>
-                        </div>
-                    @endif
                 </div>
             @endforeach
         </div>
-        @if (Auth::check() && Auth::user()->role === 'admin')
-            <div class="adm-btn">
-                <a href="{{ url('/addInstall') }}"><button type="button" class="add">Добавить</button></a>
-            </div>
-        @endif
     </section>
     <section class="step">
         <div class="step-wrapper">
@@ -359,52 +345,52 @@
     <section class="scheme" id="works">
         <h2>Понятная и эффективная схема работы</h2>
         <div class="scheme-wrapper">
-          <div class="scheme-wrapper__item">
-            <h3>Получение заявки</h3>
-            <p>
-              Заполните форму, укажите свои данные и отправьте нашим менеджерам в
-              обработку
-            </p>
-          </div>
-          <div class="scheme-wrapper__item">
-            <h3>Консультация</h3>
-            <p>
-              После обработки Вашей заявки, мы связываемся с Вами, выявляем
-              потребности и пожелания, а также проводим техническую консультацию
-            </p>
-          </div>
-          <div class="scheme-wrapper__item">
-            <h3>Выезд на объект</h3>
-            <p>
-              В назначенное время мы выезжаем на объект и согласовываем основные
-              технические решения, обсуждаем техническое задание
-            </p>
-          </div>
-          <div class="scheme-wrapper__item">
-            <h3>Составляем График</h3>
-            <p>
-              На этом этапе мы составляем коммерческое предложение и занимаемся
-              согласованием графика работ (проектирования, закупки оборудования и
-              монтажа).
-            </p>
-          </div>
-          <div class="scheme-wrapper__item">
-            <h3>договор</h3>
-            <p>
-              Мы заключаем с Вами договор и начинаем проектирование и согласование
-              проекта
-            </p>
-          </div>
-          <div class="scheme-wrapper__item">
-            <h3>Поставка и монтаж</h3>
-            <p>
-              На этом этапе, происходит поставка всех материалов и начинается
-              выполнение монтажных работ
-            </p>
-          </div>
+            <div class="scheme-wrapper__item">
+                <h3>Получение заявки</h3>
+                <p>
+                    Заполните форму, укажите свои данные и отправьте нашим менеджерам в
+                    обработку
+                </p>
+            </div>
+            <div class="scheme-wrapper__item">
+                <h3>Консультация</h3>
+                <p>
+                    После обработки Вашей заявки, мы связываемся с Вами, выявляем
+                    потребности и пожелания, а также проводим техническую консультацию
+                </p>
+            </div>
+            <div class="scheme-wrapper__item">
+                <h3>Выезд на объект</h3>
+                <p>
+                    В назначенное время мы выезжаем на объект и согласовываем основные
+                    технические решения, обсуждаем техническое задание
+                </p>
+            </div>
+            <div class="scheme-wrapper__item">
+                <h3>Составляем График</h3>
+                <p>
+                    На этом этапе мы составляем коммерческое предложение и занимаемся
+                    согласованием графика работ (проектирования, закупки оборудования и
+                    монтажа).
+                </p>
+            </div>
+            <div class="scheme-wrapper__item">
+                <h3>договор</h3>
+                <p>
+                    Мы заключаем с Вами договор и начинаем проектирование и согласование
+                    проекта
+                </p>
+            </div>
+            <div class="scheme-wrapper__item">
+                <h3>Поставка и монтаж</h3>
+                <p>
+                    На этом этапе, происходит поставка всех материалов и начинается
+                    выполнение монтажных работ
+                </p>
+            </div>
         </div>
         <img class="act" src="./img/act.png" alt="act">
-      </section>
+    </section>
     <section class="portfolio">
         <img class="portfolio-img" src="./img/ellipse-1.png" alt="elipce" />
         <div class="portfolio-top">
@@ -433,24 +419,11 @@
                                 <p>{{ $p->text }}</p>
                             </span>
                         </div>
-                        @if (Auth::check() && Auth::user()->role === 'admin')
-                            <div class="adm-btn">
-                                <a href="{{ url('/deletePortfolio') }}/{{ $p->id }}"><button
-                                        type="button">удалить</button></a>
-                                <a href="{{ url('/updatePortfolio') }}/{{ $p->id }}"><button
-                                        type="button">Редактировать</button></a>
-                            </div>
-                        @endif
                     </div>
                 @endforeach
             </div>
         </div>
     </section>
-    @if (Auth::check() && Auth::user()->role === 'admin')
-        <div class="adm-btn">
-            <a href="{{ url('/addPortfolio') }}"><button type="button" class="add">Добавить</button></a>
-        </div>
-    @endif
     <section class="clients" id="rew">
         <div class="clients-txt">
             <h2>Известные клиенты<span></span></h2>
@@ -468,14 +441,6 @@
                 @foreach ($clients as $c)
                     <div class="swiper-slide">
                         <img src="{{ 'storage/' . $c->photo }}" alt="img" />
-                        @if (Auth::check() && Auth::user()->role === 'admin')
-                            <div class="adm-btn">
-                                <a href="{{ url('/deleteClient') }}/{{ $c->id }}"><button
-                                        type="button">удалить</button></a>
-                                <a href="{{ url('/updateClient') }}/{{ $c->id }}"><button
-                                        type="button">Редактировать</button></a>
-                            </div>
-                        @endif
                     </div>
                 @endforeach
             </div>
@@ -484,11 +449,6 @@
                 <div class="swiper-button-next"></div>
             </div>
         </div>
-        @if (Auth::check() && Auth::user()->role === 'admin')
-            <div class="adm-btn">
-                <a href="{{ url('/addClient') }}"><button type="button" class="add">Добавить</button></a>
-            </div>
-        @endif
     </section>
 
     <div class="popup popup2">

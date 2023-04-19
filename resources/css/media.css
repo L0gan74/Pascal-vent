@@ -358,7 +358,7 @@
 
     .mySwiper2 {
         flex-wrap: wrap;
-        height: 275px !important;
+        height: 290px !important;
     }
 
     .footer-wrraper {
@@ -631,5 +631,11 @@
     .close-button img {
         width: 100%;
         height: 100%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .main-bottom__tel.adp {
+        display: none;
     }
 }
